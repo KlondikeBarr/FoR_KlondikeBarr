@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="for_klondikebarr_hw2" name="node1" type="node1.py"/>
+  <node pkg="for_klondikebarr_hw2" name="node2" type="node2.py"/>
+  <node pkg="for_klondikebarr_hw2" name="node3" type="node3.py"/>
+</launch>
