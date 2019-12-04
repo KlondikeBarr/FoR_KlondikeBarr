@@ -25,7 +25,7 @@ class pid_controller:
     	kdphi = 1
     	kdd = 1
     	timep = self.t_start
-    	twist = Twist2dStamped()
+    	twist = Twist2dStamped() 
 	    time = rospy.get_time()
         if timep != None:
     		dt = time - timep
@@ -60,4 +60,5 @@ class pid_controller:
 if __name__ == "__main__":
 		rospy.init_node("pid_node", anonymous=False)
 		pid_node = pid_controller()
+		
 		rospy.spin()

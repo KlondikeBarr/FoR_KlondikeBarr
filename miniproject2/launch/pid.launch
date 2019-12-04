@@ -19,7 +19,7 @@
 	<group>
 		<remap from ="pid/car_cmd" to ="vehicle_avoidance_control_node/car_cmd"/>
 		<remap from ="pid/lane_pose" to ="lane_filter_node/lane_pose"/>
-		<include file="$(find miniproject2)/launch/lane_control.launch">
+		<include file="$miniproject2/launch/lane_control.launch">
 			<arg name="veh" value="$(arg veh)"/>
 		</include>
 	</group>
