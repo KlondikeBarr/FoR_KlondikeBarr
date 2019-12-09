@@ -50,7 +50,7 @@ class pid_controller:
         	control = controlphi + controld
 
         	twist.omega = control
-        	twist.v = 0.2
+        	twist.v = 0.05
 
         	self.error_phi = error_phi
         	self.error_d = error_d
