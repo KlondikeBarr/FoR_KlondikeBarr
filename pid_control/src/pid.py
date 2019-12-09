@@ -22,8 +22,6 @@ class pid_controller:
 	error_phi = 0
 	error_d = 0
 	control = 0
-	error_accum = 0
-	self.error_accum = error_accum
         kpphi = 1
 	kpd = 1
 	kiphi = 1
@@ -37,7 +35,7 @@ class pid_controller:
     		dt = time - timep
     		error_d = 0 - lp.d
     		error_phi = 0 - lp.phi
-    		self.error_acum += error_d*dt
+    		self.error_accum += error_d*dt
     		integral = self.error_accum
     		if dt != 0:
     			derivative_d = (error_d - self.error_d)/dt
@@ -53,7 +51,6 @@ class pid_controller:
 
         		twist.omega = control
         		twist.v = 0.2
-
 
         		self.error_phi = error_phi
         		self.error_d = eroor_d
