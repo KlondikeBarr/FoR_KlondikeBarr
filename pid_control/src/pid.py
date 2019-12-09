@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from duckietown_msgs.msg import Twist2dStamped, LanePose
+from duckietown_msgs.msg import Twist2DStamped, LanePose
 import sys
 import math
 import rospy
