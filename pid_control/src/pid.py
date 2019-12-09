@@ -23,7 +23,7 @@ class pid_controller:
 	error_phi = 0
 	error_d = 0
 	control = 0
-        kpphi = 4
+        kpphi = 4.1
 	kpd = 6
 	kiphi = 0.01
 	kid = .05
