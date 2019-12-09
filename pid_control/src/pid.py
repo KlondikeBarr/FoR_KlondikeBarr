@@ -9,6 +9,7 @@ from numpy import arange,sign
 class pid_controller:
     def __init__(self):
         self.error_accum = 0
+	self.error_accumphi = 0
 	self.error_phi = 0
         self.error_d = 0
 
@@ -22,11 +23,11 @@ class pid_controller:
 	error_phi = 0
 	error_d = 0
 	control = 0
-        kpphi = 4.4
+        kpphi = 4
 	kpd = 6
 	kiphi = .1
 	kid = .05
-    	kdphi = 1.75
+    	kdphi = 1
     	kdd = 1
     	timep = self.tstart
     	twist = Twist2DStamped() 
@@ -35,6 +36,8 @@ class pid_controller:
     		dt = time - timep
     		error_d = 0 - lp.d
     		error_phi = 0 - lp.phi
+		self.error_accumphi += error_phi*dt
+		integralphi = self.error_accumphi
     		self.error_accum += error_d*dt
     		integral = self.error_accum
     		if dt != 0:
@@ -43,7 +46,7 @@ class pid_controller:
             	else:
                    	derivatived = 0.0
     			derivativephi = 0.0
-        	controlphi = kpphi*error_phi + kdphi*derivative_phi + kiphi*0.1
+        	controlphi = kpphi*error_phi + kdphi*derivative_phi + kiphi*integralphi
         	controlphi = max(min(controlphi,10.0), -10.0)
         	controld = kpd*error_d + kdd*derivative_d + kid*integral
         	controld = max(min(controld,10.0), -10.0)
