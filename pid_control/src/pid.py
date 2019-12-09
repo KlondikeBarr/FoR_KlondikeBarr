@@ -22,11 +22,11 @@ class pid_controller:
 	error_phi = 0
 	error_d = 0
 	control = 0
-        kpphi = 3.5
+        kpphi = 4
 	kpd = 6
 	kiphi = .05
 	kid = .05
-    	kdphi = 1
+    	kdphi = 1.5
     	kdd = 1
     	timep = self.tstart
     	twist = Twist2DStamped() 
