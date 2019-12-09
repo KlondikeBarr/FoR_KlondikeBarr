@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/bin/bash
 from duckietown_msgs.msg import Twist2DStamped, LanePose
 import sys
 import math
