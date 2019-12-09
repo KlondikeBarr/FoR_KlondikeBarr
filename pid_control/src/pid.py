@@ -25,7 +25,7 @@ class pid_controller:
 	control = 0
         kpphi = 4
 	kpd = 6
-	kiphi = 0
+	kiphi = 0.01
 	kid = .05
     	kdphi = 1
     	kdd = 1
