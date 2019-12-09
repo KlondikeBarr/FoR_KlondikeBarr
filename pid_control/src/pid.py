@@ -43,20 +43,19 @@ class pid_controller:
             	else:
                    	derivatived = 0.0
     			derivativephi = 0.0
-        		controlphi = kpphi*error_phi + kdphi*derivative_phi + ki_phi*0.1
-        		controlphi = max(min(control_phi,10.0), -10.0)
-        		controld = kpd*error_d + kdd*derivative_d + kid*integral
-        		controld = max(min(control_d,10.0), -10.0)
-        		control = controlphi + controld
+        	controlphi = kpphi*error_phi + kdphi*derivative_phi + ki_phi*0.1
+        	controlphi = max(min(control_phi,10.0), -10.0)
+        	controld = kpd*error_d + kdd*derivative_d + kid*integral
+        	controld = max(min(control_d,10.0), -10.0)
+        	control = controlphi + controld
 
-        		twist.omega = control
-        		twist.v = 0.2
+        	twist.omega = control
+        	twist.v = 0.2
 
-        		self.error_phi = error_phi
-        		self.error_d = eroor_d
-        		timep = t
-        		self.t_start = t
-            	self.t_start = t
+        	self.error_phi = error_phi
+        	self.error_d = error_d
+        	timep = time
+            	self.t_start = time
             	self.pub_control.publish(twist)
 	print("Error +", error_phi, error_d)
         print("Control", control)
