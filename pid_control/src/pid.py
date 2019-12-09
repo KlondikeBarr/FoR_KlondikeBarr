@@ -58,7 +58,7 @@ class pid_controller:
             	self.t_start = t
             	self.pub_control.publish(twist)
 if __name__ == "__main__":
-		rospy.init_node("pid_node", anonymous=False)
+		rospy.init_node("pid", anonymous=False)
 		pid_node = pid_controller()
 		
 		rospy.spin()
