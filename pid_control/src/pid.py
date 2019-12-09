@@ -22,7 +22,7 @@ class pid_controller:
 	error_phi = 0
 	error_d = 0
 	control = 0
-	self.error_accum = 0
+	error_accum = 0
         kpphi = 1
 	kpd = 1
 	kiphi = 1
