@@ -22,10 +22,10 @@ class pid_controller:
 	error_phi = 0
 	error_d = 0
 	control = 0
-        kpphi = 1
-	kpd = 1
-	kiphi = 1
-	kid = 1
+        kpphi = 6
+	kpd = 4
+	kiphi = .1
+	kid = .1
     	kdphi = 1
     	kdd = 1
     	timep = self.tstart
@@ -50,7 +50,7 @@ class pid_controller:
         	control = controlphi + controld
 
         	twist.omega = control
-        	twist.v = 0.05
+        	twist.v = 0.2
 
         	self.error_phi = error_phi
         	self.error_d = error_d
