@@ -12,7 +12,7 @@ class pid_controller:
 	self.error_phi = 0
         self.error_d = 0
 
-	self.pub_control = rospy.Publisher("~car_cmd", Twist2dStamped, queue_size=1)
+	self.pub_control = rospy.Publisher("~car_cmd", Twist2DStamped, queue_size=1)
 	self.sub_lanepose = rospy.Subscriber("~lane_pose", LanePose, self.pid_motion, queue_size=1)
 
 	self.rate = rospy.Rate(10)
@@ -26,7 +26,7 @@ class pid_controller:
     	kdphi = 1
     	kdd = 1
     	timep = self.t_start
-    	twist = Twist2dStamped() 
+    	twist = Twist2DStamped() 
 	time = rospy.get_time()
         if timep != None:
     		dt = time - timep
@@ -61,5 +61,4 @@ class pid_controller:
 if __name__ == "__main__":
 		rospy.init_node("pid", anonymous=False)
 		pid_node = pid_controller()
-		
 		rospy.spin()
