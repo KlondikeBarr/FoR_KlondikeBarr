@@ -19,6 +19,9 @@ class pid_controller:
 	self.lp = LanePose()
 	self.tstart = None
     def pid_motion(self, lp):
+	error_phi = 0
+	error_d = 0
+	control = 0
         kpphi = 1
 	kpd = 1
 	kiphi = 1
@@ -49,8 +52,6 @@ class pid_controller:
         		twist.omega = control
         		twist.v = 0.2
 
-        		print("Error +", error_phi, error_d)
-        		print("Control", control)
 
         		self.error_phi = error_phi
         		self.error_d = eroor_d
@@ -58,6 +59,8 @@ class pid_controller:
         		self.t_start = t
             	self.t_start = t
             	self.pub_control.publish(twist)
+	print("Error +", error_phi, error_d)
+        print("Control", control)
 if __name__ == "__main__":
 		rospy.init_node("pid", anonymous=False)
 		pid_node = pid_controller()
