@@ -22,10 +22,10 @@ class pid_controller:
 	error_phi = 0
 	error_d = 0
 	control = 0
-        kpphi = 6
-	kpd = 4
-	kiphi = .1
-	kid = .1
+        kpphi = 4
+	kpd = 6
+	kiphi = .05
+	kid = .05
     	kdphi = 1
     	kdd = 1
     	timep = self.tstart
