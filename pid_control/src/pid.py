@@ -17,7 +17,7 @@ class pid_controller:
 
 	self.rate = rospy.Rate(10)
 	self.lp = LanePose()
-	self.tstart = None
+	self.tstart = rospy.get_time()
     def pid_motion(self, lp):
 	error_phi = 0
 	error_d = 0
