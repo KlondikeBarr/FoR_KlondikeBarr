@@ -36,7 +36,7 @@ class pid_controller:
     		integral = self.error_accum
     		if dt != 0:
     			derivative_d = (error_d - self.error_d)/dt
-    			derivative_phi = (error_phi - self.error_phi)dt
+    			derivative_phi = (error_phi - self.error_phi)/dt
             	else:
                    	derivatived = 0.0
     			derivativephi = 0.0
