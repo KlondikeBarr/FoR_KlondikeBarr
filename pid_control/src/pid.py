@@ -1,11 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env python
 from duckietown_msgs.msg import Twist2DStamped, LanePose
 import sys
 import math
 import rospy
 import time
 from numpy import arange,sign
-from numpy import core.multiarray
 
 class pid_controller:
     def __init__(self):
