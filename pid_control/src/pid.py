@@ -9,7 +9,7 @@ from numpy import arange,sign
 class pid_controller:
     def __init__(self):
         self.error_accum = 0
-	self.error_phi
+	self.error_phi = 0
         self.error_d = 0
 
 	self.pub_control = rospy.Publisher("~car_cmd", Twist2dStamped, queue_size=1)
