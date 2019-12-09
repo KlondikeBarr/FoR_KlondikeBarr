@@ -44,9 +44,9 @@ class pid_controller:
                    	derivatived = 0.0
     			derivativephi = 0.0
         	controlphi = kpphi*error_phi + kdphi*derivative_phi + kiphi*0.1
-        	controlphi = max(min(control_phi,10.0), -10.0)
+        	controlphi = max(min(controlphi,10.0), -10.0)
         	controld = kpd*error_d + kdd*derivative_d + kid*integral
-        	controld = max(min(control_d,10.0), -10.0)
+        	controld = max(min(controld,10.0), -10.0)
         	control = controlphi + controld
 
         	twist.omega = control
