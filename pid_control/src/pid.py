@@ -25,7 +25,7 @@ class pid_controller:
 	kid = 1
     	kdphi = 1
     	kdd = 1
-    	timep = self.t_start
+    	timep = self.tstart
     	twist = Twist2DStamped() 
 	time = rospy.get_time()
         if timep != None:
