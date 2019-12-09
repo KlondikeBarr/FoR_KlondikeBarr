@@ -43,7 +43,7 @@ class pid_controller:
             	else:
                    	derivatived = 0.0
     			derivativephi = 0.0
-        	controlphi = kpphi*error_phi + kdphi*derivative_phi + ki_phi*0.1
+        	controlphi = kpphi*error_phi + kdphi*derivative_phi + kiphi*0.1
         	controlphi = max(min(control_phi,10.0), -10.0)
         	controld = kpd*error_d + kdd*derivative_d + kid*integral
         	controld = max(min(control_d,10.0), -10.0)
