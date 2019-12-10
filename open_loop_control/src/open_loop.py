@@ -12,25 +12,25 @@ if __name__ == '__main__':
             msg.omega = 0
         elif dt > 6 and dt < 8:
             msg.v = 0.10
-            msg.omega = 45.0
+            msg.omega = 1.0472
         elif dt > 8 and dt < 11:
             msg.v = 0.50
             msg.omega = 0.0
         elif dt > 11 and dt < 13:
             msg.v = 0.10
-            msg.omega = 45.0
+            msg.omega = 1.0472
         elif dt > 13 and dt < 16:
             msg.v = 0.50
             msg.omega = 0.0
         elif dt > 16 and dt < 18:
             msg.v = 0.10
-            msg.omega = 45.0
+            msg.omega = 1.0472
         elif dt > 18 and dt < 21:
             msg.v = 0.50
             msg.omega = 0.0
         elif dt > 21 and dt < 23:
             msg.v = 0.10
-            msg.omega = 45.0
+            msg.omega = 1.0472
         else:
             msg.v = 0
             msg.omega = 0
